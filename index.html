@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
 
     <!-- <link href="value.json"> -->
 
@@ -34,305 +40,397 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script type="text/javascript">
-        function load() {
-            $(".preloader").fadeOut("slow");
-            var mydata = JSON.parse(data);
-            console.log(mydata);
+      function load() {
+        $(".preloader").fadeOut("slow");
+        var mydata = JSON.parse(data);
+        console.log(mydata);
 
-            document.getElementById("texthere").innerHTML =
-                mydata.Text_Value.value3;
-            document.getElementById("texv1").innerHTML = mydata.Text_Value.value1;
-            document.getElementById("texv2").innerHTML = mydata.Text_Value.value2;
+        document.getElementById("texthere").innerHTML =
+          mydata.Text_Value.value3;
+        document.getElementById("texv1").innerHTML = mydata.Text_Value.value1;
+        document.getElementById("texv2").innerHTML = mydata.Text_Value.value2;
 
-            //   for slider
+        //   for slider
 
-            document.getElementById("slideValue1").value = mydata.Text_Value.value3;
-            document.getElementById("slideValue2").value = mydata.Text_Value.value1;
-            document.getElementById("slideValue3").value = mydata.Text_Value.value2;
+        document.getElementById("slideValue1").value = mydata.Text_Value.value3;
+        document.getElementById("slideValue2").value = mydata.Text_Value.value1;
+        document.getElementById("slideValue3").value = mydata.Text_Value.value2;
 
-            // preloader here
-            console.log("window is loaded");
-        }
+        // preloader here
+        console.log("window is loaded");
+      }
     </script>
 
     <style>
-        body {
-            background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg");
+      body {
+        background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg");
 
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100% 100%;
-            background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+      }
+
+      .card-border {
+        background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #mydiv {
+        position: absolute;
+        /* z-index: 9; */
+      }
+
+      #mydiv1 {
+        position: absolute;
+        /* z-index: 9; */
+      }
+
+      #mydiv2 {
+        position: absolute;
+        /* z-index: 9; */
+      }
+
+      #mydiv3 {
+        position: absolute;
+        /* z-index: 9; */
+      }
+
+      #mydiv4 {
+        position: absolute;
+        /* z-index: 9; */
+      }
+
+      #mydiv5 {
+        position: absolute;
+        /* z-index: 9; */
+      }
+
+      /* this is for preloader  */
+
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #9370db;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
+
+      .loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #ba55d3;
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite;
+      }
+
+      .loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #ff00ff;
+        -webkit-animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite;
+      }
+
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
         }
 
-        .card-border {
-            background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
+        100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
         }
 
-        #mydiv {
-            position: absolute;
-            /* z-index: 9; */
+        100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
         }
+      }
 
-        #mydiv1 {
-            position: absolute;
-            /* z-index: 9; */
-        }
+      .showborder:hover {
+        border-style: dashed;
+        border-color: rgb(255, 255, 255);
+        border-width: 2px;
+        border-radius: 5px;
+      }
 
-        #mydiv2 {
-            position: absolute;
-            /* z-index: 9; */
-        }
+      .showborder {
+        border-style: solid;
+        border-color: transparent;
+        border-width: 2px;
+      }
 
-        #mydiv3 {
-            position: absolute;
-            /* z-index: 9; */
-        }
+      .showhovermain:hover .showediticon {
+        display: inline-block;
+      }
 
-        #mydiv4 {
-            position: absolute;
-            /* z-index: 9; */
-        }
-
-        #mydiv5 {
-            position: absolute;
-            /* z-index: 9; */
-        }
-
-        /* this is for preloader  */
-
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgb(255, 255, 255);
-        }
-
-        .loader {
-            display: block;
-            position: relative;
-            left: 50%;
-            top: 50%;
-            width: 150px;
-            height: 150px;
-            margin: -75px 0 0 -75px;
-            border-radius: 50%;
-            border: 3px solid transparent;
-            border-top-color: #9370db;
-            -webkit-animation: spin 2s linear infinite;
-            animation: spin 2s linear infinite;
-        }
-
-        .loader:before {
-            content: "";
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            right: 5px;
-            bottom: 5px;
-            border-radius: 50%;
-            border: 3px solid transparent;
-            border-top-color: #ba55d3;
-            -webkit-animation: spin 3s linear infinite;
-            animation: spin 3s linear infinite;
-        }
-
-        .loader:after {
-            content: "";
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            right: 15px;
-            bottom: 15px;
-            border-radius: 50%;
-            border: 3px solid transparent;
-            border-top-color: #ff00ff;
-            -webkit-animation: spin 1.5s linear infinite;
-            animation: spin 1.5s linear infinite;
-        }
-
-        @-webkit-keyframes spin {
-            0% {
-                -webkit-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-                -ms-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes spin {
-            0% {
-                -webkit-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-                -ms-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-
-        .showborder:hover {
-            border-style: dashed;
-            border-color: rgb(255, 255, 255);
-            border-width: 2px;
-            border-radius: 5px;
-        }
-
-        .showborder {
-            border-style: solid;
-            border-color: transparent;
-            border-width: 2px;
-        }
-
-        .showhovermain:hover .showediticon {
-            display: inline-block;
-        }
-
-        .showediticon {
-            display: none;
-        }
+      .showediticon {
+        display: none;
+      }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
-</head>
+  </head>
 
-<body onload="load()">
+  <body onload="load()">
     <div class="preloader">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
 
     <div class="container mt-5">
-        <h1 style="
+      <h1
+        style="
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           font-weight: bold;
-        " class="text-center">
-            Make Your Own Visiting Card
-        </h1>
+        "
+        class="text-center"
+      >
+        Make Your Own Visiting Card
+      </h1>
     </div>
 
-    <div id="snapItNow" style="width: 50%; height: 300px; background-color: brown"
-        class="container mt-5 border p-2 rounded border-dark">
-        <div class="container">
-            <div id="mydiv" class="mb-5">
-                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHJeVcPdQzq7wEyPyKyEPd4XUgJnJu3IjOsw&usqp=CAU"
+    <div
+      id="snapItNow"
+      style="width: 50%; height: 300px; background-color: brown"
+      class="container mt-5 border p-2 rounded border-dark"
+    >
+      <div class="container">
+        <div id="mydiv" class="mb-5">
+          <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHJeVcPdQzq7wEyPyKyEPd4XUgJnJu3IjOsw&usqp=CAU"
                     id="mydivheader" style="width: 680px; height: 300px;" class="img-fluid rounded"> -->
+        </div>
+        <div class="row">
+          <div id="add_to_me" class="col-sm-4">
+            <div id="mydiv1">
+              <h1
+                id="textOne"
+                style="cursor: move; font-size: 30px"
+                class="mb-4 text-white showhovermain showborder"
+              >
+                Logo
+                <span style="cursor: pointer; font-size: 20px; padding: 10px"
+                  ><i
+                  onclick="handleDynamicClick('Logo')"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    class="bi bi-pencil-fill showediticon"
+                  ></i
+                ></span>
+              </h1>
             </div>
-            <div class="row">
-                <div id="add_to_me" class="col-sm-4">
-                    <div id="mydiv1">
-                        <h1 id="textOne" style="cursor: move; font-size: 30px"
-                            class="mb-4 text-white showhovermain showborder">
-                            Logo
-                            <span style="cursor: pointer; font-size: 20px; padding: 10px"><i data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                                    class="bi bi-pencil-fill showediticon"></i></span>
-                        </h1>
-                    </div>
-                    <div id="add_after_me" class="mt-5">
-                        <div class="pt-3" id="mydiv2">
-                            <h5 id="textTwo" style="cursor: move" class="text-white showborder showhovermain">
-                                Kumar Nitesh
-                                <span style="cursor: pointer"><i data-bs-toggle="offcanvas"
-                                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                                        class="bi bi-pencil-fill showediticon"></i></span>
-                            </h5>
-                        </div>
-                        <div class="" id="mydiv3">
-                            <h5 id="textThree" style="cursor: move; margin-top: 35px; margin-bottom: 35px"
-                                class="text-white showborder showhovermain">
-                                Rathyatra Varanasi<span style="cursor: pointer; color: white"><i
-                                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                                        aria-controls="offcanvasNavbar"
-                                        class="bi bi-pencil-fill showediticon"></i></span>
-                            </h5>
-                        </div>
+            <div id="add_after_me" class="mt-5">
+              <div class="pt-3" id="mydiv2">
+                <h5
+                  id="textTwo"
+                  style="cursor: move"
+                  class="text-white showborder showhovermain"
+                >
+                  Kumar Nitesh
+                  <span style="cursor: pointer"
+                    ><i
+                    onclick="handleDynamicClick('Kumar Nitesh')"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasNavbar"
+                      aria-controls="offcanvasNavbar"
+                      class="bi bi-pencil-fill showediticon"
+                    ></i
+                  ></span>
+                </h5>
+              </div>
+              <div class="" id="mydiv3">
+                <h5
+                
+                  id="textThree"
+                  style="cursor: move; margin-top: 35px; margin-bottom: 35px"
+                  class="text-white showborder showhovermain"
+                >
+                  Rathyatra Varanasi<span style="cursor: pointer; color: white"
+                    ><i
+                    onclick="handleDynamicClick('Rathyatra Varanasi')"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasNavbar"
+                      aria-controls="offcanvasNavbar"
+                      class="bi bi-pencil-fill showediticon"
+                    ></i
+                  ></span>
+                </h5>
+              </div>
 
-                        <div class="pt-3" id="mydiv4">
-                            <p id="textFour" style="cursor: move; margin-top: 40px"
-                                class="text-white showhovermain showborder">
-                                6393344720<span style="cursor: pointer"><i data-bs-toggle="offcanvas"
-                                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                                        class="bi bi-pencil-fill showediticon"></i></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4 text-center">
-                    <div id="mydiv5">
-                        <img style="
+              <div class="pt-3" id="mydiv4">
+                <p
+                  id="textFour"
+                  style="cursor: move; margin-top: 40px"
+                  class="text-white showhovermain showborder"
+                >
+                  6393344720<span style="cursor: pointer"
+                    ><i
+                    onclick="handleDynamicClick('6393344720')"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasNavbar"
+                      aria-controls="offcanvasNavbar"
+                      class="bi bi-pencil-fill showediticon"
+                    ></i
+                  ></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4 text-center">
+            <div id="mydiv5">
+              <img
+                style="
                   width: 120px;
                   cursor: move;
                   margin-left: 40px;
                   cursor: move;
-                " id="mydivheader"
-                            src="https://media.istockphoto.com/vectors/code-illustration-vector-id828088276?k=20&m=828088276&s=612x612&w=0&h=JnX2DFXVGyTe-wDXdXhTG9p7yPmbd-jO3qWRfCQnHgE="
-                            class="img-fluid" alt="" />
-                    </div>
-                </div>
+                "
+                id="mydivheader"
+                src="https://media.istockphoto.com/vectors/code-illustration-vector-id828088276?k=20&m=828088276&s=612x612&w=0&h=JnX2DFXVGyTe-wDXdXhTG9p7yPmbd-jO3qWRfCQnHgE="
+                class="img-fluid"
+                alt=""
+              />
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- this is navbar  -->
     <nav class="navbar fixed-top">
-        <div class="container-fluid">
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                        Edit Content
-                    </h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <input onchange="document.getElementById('textOne').innerHTML=this.value "
-                        style="margin-top: 10px; width: 100%" value="Logo" type="input" />
-                    <br />
-                    <input style="margin-top: 10px; width: 100%"
-                        onchange="document.getElementById('textTwo').innerHTML=this.value " value="Kumar Nitesh"
-                        type="text" />
-                    <br />
+      <div class="container-fluid">
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              Edit Content
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- <input
+              onchange="document.getElementById('textOne').innerHTML=this.value "
+              style="margin-top: 10px; width: 100%"
+              value="Logo"
+              type="input"
+            />
+            <br />
+            <input
+              style="margin-top: 10px; width: 100%"
+              onchange="document.getElementById('textTwo').innerHTML=this.value "
+              value="Kumar Nitesh"
+              type="text"
+            />
+            <br />
 
-                    <input style="margin-top: 10px; width: 100%"
-                        onchange="document.getElementById('textThree').innerHTML=this.value " value="Rathyatra Varanasi"
-                        type="input" />
-                    <br />
-                    <input style="margin-top: 10px; width: 100%"
-                        onchange="document.getElementById('textFour').innerHTML=this.value " value="6393344720"
-                        type="text" />
-                    <br />
+            <input
+              style="margin-top: 10px; width: 100%"
+              onchange="document.getElementById('textThree').innerHTML=this.value "
+              value="Rathyatra Varanasi"
+              type="input"
+            />
+            <br />
+            <input
+              style="margin-top: 10px; width: 100%"
+              onchange="document.getElementById('textFour').innerHTML=this.value "
+              value="6393344720"
+              type="text"
+            />
+            <br /> -->
 
-                    <div class="container mt-4">
-                        <button data-bs-dismiss="offcanvas" aria-label="Close" class="btn btn-success">
-                            Save
-                        </button>
-                    </div>
-                </div>
+
+            <input
+            style="margin-top: 10px; width: 100%"
+            onchange="document.getElementById('textFour').innerHTML=this.value "
+            value=`${username}`
+            type="text"
+          />
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="container mt-4">
+              <button
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+                class="btn btn-success"
+              >
+                Save
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- navbar ends here  -->
 
     <div class="container text-center mt-5">
-        <button onclick="snap()" class="btn btn-primary">Capture</button>
+      <button onclick="snap()" class="btn btn-primary">Capture</button>
     </div>
 
     <div class="container text-center mt-5">
-        <button onclick="addCode()" class="btn btn-success">Add New</button>
+      <button onclick="addCode()" class="btn btn-success">Add New</button>
     </div>
 
     <!-- <div class="container text-center mt-5">
@@ -342,51 +440,51 @@
     </div> -->
 
     <h4 id="textOne"></h4>
-</body>
+  </body>
 
-<script>
+  <script>
     function addCode() {
-        //   var val = Math.floor(1000 + Math.random() * 9000);
+      //   var val = Math.floor(1000 + Math.random() * 9000);
 
-        //   let value = `mydivheader${val}`;
+      //   let value = `mydivheader${val}`;
 
-        //   let ArrayId = [];
+      //   let ArrayId = [];
 
-        //   ArrayId.push(value);
+      //   ArrayId.push(value);
 
-        //   let final = ArrayId.toString();
+      //   let final = ArrayId.toString();
 
-        //   console.log(final);
-        var tag = 1;
+      //   console.log(final);
+      var tag = 1;
 
-        document
-            .getElementById("add_after_me")
-            .insertAdjacentHTML(
-                "afterend",
-                ` <h5 id="mydivheader` +
-                tag +
-                `" style='cursor: move;  position: absolute; ' class='text-white element showborder showhovermain  '  >New Text <span style="cursor: pointer; font-size: 20px;"><i data-bs-toggle="offcanvas"
+      document.getElementById("add_after_me").insertAdjacentHTML(
+        "afterend",
+        ` <h5 id="mydivheader` +
+          tag +
+          `" style='cursor: move;  position: absolute; ' class='text-white element showborder showhovermain  '  >New Text <span style="cursor: pointer; font-size: 20px;"><i data-bs-toggle="offcanvas"
                                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
                                     class="bi bi-pencil-fill showediticon"></i></span></h5>`
-            );
-        dragElement(document.getElementById("mydivheader" + tag));
+      );
+      dragElement(document.getElementById("mydivheader" + tag));
     }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
-<script>
+  <script>
     function snap() {
-        domtoimage
-            .toJpeg(document.getElementById("snapItNow"), { quality: 0.95 })
-            .then(function (dataUrl) {
-                var link = document.createElement("a");
-                link.download = "my-image-name.jpeg";
-                link.href = dataUrl;
-                link.click();
-            });
+      domtoimage
+        .toJpeg(document.getElementById("snapItNow"), { quality: 0.95 })
+        .then(function (dataUrl) {
+          var link = document.createElement("a");
+          link.download = "my-image-name.jpeg";
+          link.href = dataUrl;
+          link.click();
+        });
     }
     //Make the DIV element draggagle:
     dragElement(document.getElementById("mydiv"));
@@ -398,52 +496,82 @@
     dragElement(document.getElementById("meta"));
 
     function dragElement(elmnt) {
-        var pos1 = 0,
-            pos2 = 0,
-            pos3 = 0,
-            pos4 = 0;
-        if (document.getElementById(elmnt.id + "header")) {
-            /* if present, the header is where you move the DIV from:*/
-            document.getElementById(elmnt.id + "header").onmousedown =
-                dragMouseDown;
-        } else {
-            /* otherwise, move the DIV from anywhere inside the DIV:*/
-            elmnt.onmousedown = dragMouseDown;
-        }
+      var pos1 = 0,
+        pos2 = 0,
+        pos3 = 0,
+        pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown =
+          dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
 
-        function dragMouseDown(e) {
-            e = e || window.event;
-            e.preventDefault();
-            // get the mouse cursor position at startup:
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            document.onmouseup = closeDragElement;
-            // call a function whenever the cursor moves:
-            document.onmousemove = elementDrag;
-        }
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
 
-        function elementDrag(e) {
-            e = e || window.event;
-            e.preventDefault();
-            // calculate the new cursor position:
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
-            pos3 = e.clientX;
-            pos4 = e.clientY;
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
 
-            // set the element's new position:
-            elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-            elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
-        }
+        // set the element's new position:
+        elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+        elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+      }
 
-        function closeDragElement() {
-            /* stop moving when mouse button is released:*/
-            document.onmouseup = null;
-            document.onmousemove = null;
-        }
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
     }
-</script>
+  </script>
 
-<script></script>
+  <script>
 
+
+function handleDynamicClick(name) {
+    
+   let username=name
+   console.log(username)
+
+   this.state = name
+
+
+
+
+
+
+   
+    
+}
+
+
+console.log(state)
+
+
+
+
+
+
+
+
+
+
+  </script>
 </html>
