@@ -8,6 +8,8 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
 
 
 
@@ -15,6 +17,7 @@
     <!-- <link href="value.json"> -->
 
     <!-- <script src="value.json"></script> -->
+
 
 
     <script type="text/javascript">
@@ -201,6 +204,34 @@
                 transform: rotate(360deg);
             }
         }
+
+
+        .showborder:hover {
+            border-style: dashed;
+            border-color: rgb(255, 255, 255);
+            border-width: 2px;
+            border-radius: 5px;
+
+        }
+
+
+        .showborder {
+            border-style: solid;
+            border-color: transparent;
+            border-width: 2px;
+
+        }
+
+        .showhovermain:hover .showediticon {
+            display: inline-block;
+
+        }
+
+
+        .showediticon {
+            display: none;
+
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
 </head>
@@ -220,7 +251,6 @@
         </h1>
     </div>
 
-
     <div id="snapItNow" style="width: 50%; height: 300px; background-color: brown"
         class="container mt-5 border p-2 rounded border-dark">
         <div class="container">
@@ -231,36 +261,46 @@
             <div class="row">
                 <div id="add_to_me" class="col-sm-4">
                     <div id="mydiv1">
-                        <h1 data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                            id="textOne" style="cursor: move" class="mb-4 text-white navbar-toggler">
-                            Logo
+                        <h1 
+                            id="textOne" style="cursor: move;font-size: 30px;" class="mb-4 text-white showhovermain showborder">
+                            Logo <span  style="cursor: pointer;font-size: 20px;padding: 10px;"><i data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                class="bi bi-pencil-fill   showediticon"></i></span>
                         </h1>
                     </div>
                     <div id="add_after_me" class="mt-5">
                         <div class="pt-3" id="mydiv2">
-                            <h5 data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                                aria-controls="offcanvasNavbar" id="textTwo" style="cursor: move; padding-top: 20px"
-                                class="text-white navbar-toggler">
-                                Kumar Nitesh
+
+
+                            <h5 id="textTwo" style="cursor: move; "
+                                class="text-white showborder showhovermain">
+                                Kumar Nitesh <span style="cursor: pointer;"><i data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                        class="bi bi-pencil-fill  showediticon"></i></span>
                             </h5>
+
+
+
                         </div>
-                        <div class="pt-3" id="mydiv3">
-                            <h5 data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                                aria-controls="offcanvasNavbar" id="textThree" style="cursor: move; padding-top: 45px"
-                                class="text-white navbar-toggler">
-                                Rathyatra Varanasi
+                        <div class="" id="mydiv3">
+                            <h5 id="textThree" style="cursor: move; margin-top: 35px;margin-bottom: 35px;"
+                                class="text-white   showborder showhovermain">
+                                Rathyatra Varanasi<span style="cursor: pointer;color: white;"><i data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                        class="bi bi-pencil-fill  showediticon"></i></span>
                             </h5>
                         </div>
 
                         <div class="pt-3" id="mydiv4">
-                            <p id="textFour" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                                aria-controls="offcanvasNavbar" style="cursor: move; padding-top: 70px"
-                                class="text-white navbar-toggler ">
-                                6393344720
+                            <p id="textFour" style="cursor: move; margin-top: 40px;"
+                                class="text-white  showhovermain  showborder">
+                                6393344720<span style="cursor: pointer;"><i data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                        class="bi bi-pencil-fill  showediticon"></i></span>
                             </p>
                         </div>
 
-                        
+
 
                     </div>
                 </div>
@@ -294,11 +334,18 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <input onchange="document.getElementById('textOne').innerHTML=this.value "style="margin-top: 10px;width: 100%;" value="Logo" type="input"> <br>
-                    <input style="margin-top: 10px;width: 100%;"onchange="document.getElementById('textTwo').innerHTML=this.value " value="Kumar Nitesh"  type="text"> <br>
+                    <input onchange="document.getElementById('textOne').innerHTML=this.value "
+                        style="margin-top: 10px;width: 100%;" value="Logo" type="input"> <br>
+                    <input style="margin-top: 10px;width: 100%;"
+                        onchange="document.getElementById('textTwo').innerHTML=this.value " value="Kumar Nitesh"
+                        type="text"> <br>
 
-                    <input style="margin-top: 10px;width: 100%;" onchange="document.getElementById('textThree').innerHTML=this.value " value="Rathyatra Varanasi"  type="input"> <br>
-                    <input style="margin-top: 10px;width: 100%;"onchange="document.getElementById('textFour').innerHTML=this.value " value="6393344720" type="text"> <br>
+                    <input style="margin-top: 10px;width: 100%;"
+                        onchange="document.getElementById('textThree').innerHTML=this.value " value="Rathyatra Varanasi"
+                        type="input"> <br>
+                    <input style="margin-top: 10px;width: 100%;"
+                        onchange="document.getElementById('textFour').innerHTML=this.value " value="6393344720"
+                        type="text"> <br>
 
 
 
@@ -347,7 +394,7 @@
     </div> -->
 
 
-    <h4  id="textOne"></h4>
+    <h4 id="textOne"></h4>
 
 
 
@@ -478,7 +525,7 @@
 
 <script>
 
- 
+
 
 
 
