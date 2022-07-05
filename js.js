@@ -1,8 +1,5 @@
 // data = '[{"name" : "Riyaz"},{"name" : "Javed"},{"name" : "Arun"},{"name" : "Sunil"},{"name" : "Rahul"},{"name" : "Anita"}]';
 
-
-
-
 data = `{
     "Text_Value": {
         "text": "h5",
@@ -14,7 +11,7 @@ data = `{
         "font-weight":"bold",
         "position":"absolute",
         "value1":"Kumar Nitesh",
-        "value2":"Rathyatra Varanasi",
+        "value2":"Rathyatra, Varanasi",
         "value3":"6393344720"
 
     },
@@ -23,4 +20,4 @@ data = `{
         "size":"50px"
     }
     
-}`
+}`;
